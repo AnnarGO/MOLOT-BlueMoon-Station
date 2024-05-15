@@ -11055,7 +11055,7 @@
 /obj/item/clothing/gloves/combat/maid/inteq,
 /obj/item/clothing/glasses/hud/security/sunglasses/inteq,
 /obj/item/clothing/head/maid/syndicate/inteq,
-/obj/item/clothing/under/inteq_maid,
+/obj/item/clothing/under/inteq/maid,
 /obj/item/clothing/shoes/laceup,
 /turf/open/floor/wood/wood_parquet,
 /area/syndicate_mothership/control)
@@ -17718,17 +17718,6 @@
 /obj/structure/table/wood,
 /turf/open/floor/wood/wood_parquet,
 /area/syndicate_mothership/control)
-"izz" = (
-/obj/effect/turf_decal/tile/brown,
-/obj/effect/turf_decal/tile/brown{
-	dir = 1
-	},
-/obj/machinery/door/airlock/centcom{
-	name = "Intersection";
-	req_access_txt = "152"
-	},
-/turf/open/floor/iron/dark,
-/area/syndicate_mothership/control)
 "izH" = (
 /obj/structure/artilleryplaceholder{
 	icon_state = "17"
@@ -22289,7 +22278,7 @@
 "mQg" = (
 /obj/item/storage/box/inteq_box/inteq_clothes,
 /obj/item/clothing/head/HoS/inteq_vanguard,
-/obj/item/clothing/under/inteq_skirt,
+/obj/item/clothing/under/inteq/skirt,
 /obj/structure/closet/syndicate/inteq/personal,
 /obj/machinery/light,
 /turf/open/floor/wood/wood_parquet,
@@ -22752,7 +22741,7 @@
 	},
 /obj/item/clothing/head/HoS/inteq_honorable_vanguard,
 /obj/item/clothing/suit/armor/inteq/honorable_vanguard,
-/obj/item/clothing/under/inteq_honorable_vanguard,
+/obj/item/clothing/under/inteq/honorable_vanguard,
 /turf/open/floor/wood/wood_parquet,
 /area/syndicate_mothership/control)
 "nmk" = (
@@ -25204,14 +25193,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/centcom/evac)
-"pCV" = (
-/obj/effect/turf_decal/tile/brown/opposingcorners,
-/obj/machinery/door/airlock/centcom{
-	name = "Intersection";
-	req_access_txt = "152"
-	},
-/turf/open/floor/iron/dark,
-/area/syndicate_mothership/control)
 "pCX" = (
 /obj/effect/turf_decal/tile/brown{
 	dir = 1
@@ -52516,9 +52497,9 @@ uZh
 uZh
 uZh
 uZh
-pCV
+koj
 jAc
-izz
+koj
 uZh
 jAc
 jAc
@@ -55364,7 +55345,7 @@ prN
 prN
 mlc
 uZh
-oLP
+koj
 uZh
 uZh
 uZh
@@ -56644,7 +56625,7 @@ uZh
 wyv
 uZh
 jAc
-chv
+jAc
 jAc
 jAc
 uZh
