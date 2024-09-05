@@ -1630,8 +1630,19 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 			//
 			H.update_inv_wear_suit()
 
+
+	//SPLURT: If you haven't walked into a different tile in 5 minutes, don't drain hunger/thirst.
+	if(H.client && (((world.time - H.client?.last_move)) > 5 MINUTES))
+		if(!H.insanelycomfy)
+			to_chat(H, span_notice("You feel comfy."))
+			H.insanelycomfy = TRUE
+	else if(H.insanelycomfy)
+		to_chat(H, span_notice("You no longer feel comfy."))
+		H.insanelycomfy = FALSE
+	//SPLURT ADDITION
+
 	// nutrition decrease and satiety
-	if (H.nutrition > 0 && H.stat != DEAD && !HAS_TRAIT(H, TRAIT_NOHUNGER))
+	if (H.nutrition > 0 && H.stat != DEAD && !HAS_TRAIT(H, TRAIT_NOHUNGER) && !H.insanelycomfy)
 		// THEY HUNGER
 		var/hunger_rate = HUNGER_FACTOR
 		var/datum/component/mood/mood = H.GetComponent(/datum/component/mood)
@@ -1860,6 +1871,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 				target.visible_message(span_warning("Корпус [target] слишком прочный, удар не повредил его!"), span_notice("Корпус нивелирует наносимые повреждения."))
 			else
 				target.visible_message("Кожа [target] слишком прочная, удар не повредил её!", span_notice("Кожа даже не повреждается от наносимых повреждений."))
+		damage *= get_size(user) // в зависимости от размера персонажа, урон становится больше, или меньше
 		// BLUEMOON ADD END
 
 		if(user.limb_destroyer)
@@ -2266,7 +2278,7 @@ GLOBAL_LIST_EMPTY(roundstart_race_names)
 			to_chat(user, "<span class='notice'>You can only force yourself up if you're on the ground.</span>")
 			return
 		// BLUEMOON ADD START
-		var/shove_up_stamina_cost = STAMINA_COST_SHOVE_UP
+		var/shove_up_stamina_cost = MAX_STAMINA_HEALTH * CONFIG_GET(number/percent_stamina_cost_shove_up)
 		if(HAS_TRAIT(user, TRAIT_BLUEMOON_HEAVY_SUPER)) // сверхтяжёлые персонажи поднимаются в два раза тяжелее
 			shove_up_stamina_cost *= 2
 		else if(HAS_TRAIT(user, TRAIT_BLUEMOON_HEAVY)) // тяжёлые персонажи поднимаются в 1.5 раза тяжелее

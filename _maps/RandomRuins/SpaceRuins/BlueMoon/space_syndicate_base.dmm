@@ -5873,7 +5873,7 @@
 	dir = 4;
 	dwidth = 6;
 	height = 16;
-	id = "ds2_syndicate";
+	shuttle_id = "ds2_syndicate";
 	name = "DS-2 Hangar";
 	roundstart_template = /datum/map_template/shuttle/ruin/ds_shuttle;
 	width = 16
@@ -8950,7 +8950,7 @@
 /obj/effect/turf_decal/siding/yellow{
 	dir = 9
 	},
-/obj/machinery/droneDispenser/syndrone/badass,
+/obj/machinery/smoke_machine,
 /turf/open/floor/iron/dark/small,
 /area/ruin/space/has_grav/bluemoon/deepspacetwo/engineering)
 "LY" = (
@@ -11978,6 +11978,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer3{
 	dir = 4
 	},
+/obj/machinery/space_heater,
 /turf/open/floor/iron/dark/small,
 /area/ruin/space/has_grav/bluemoon/deepspacetwo/engineering)
 "XC" = (

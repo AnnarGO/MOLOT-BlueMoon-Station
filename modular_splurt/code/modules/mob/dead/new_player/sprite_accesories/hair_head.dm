@@ -73,6 +73,26 @@
 	icon_state = "hair_glamourh"
 	icon = 'modular_splurt/icons/mob/hair.dmi'
 
+/datum/sprite_accessory/hair/ThickShort
+	name = "Thick (Short)"
+	icon_state = "hair_thick_(short)"
+	icon = 'modular_splurt/icons/mob/hair.dmi'
+
+/datum/sprite_accessory/hair/ThickLong
+	name = "Thick (Long)"
+	icon_state = "hair_thick_(long)"
+	icon = 'modular_splurt/icons/mob/hair.dmi'
+
+/datum/sprite_accessory/hair/ThickCurly
+	name = "Thick (Curly)"
+	icon_state = "hair_thick_(curly)"
+	icon = 'modular_splurt/icons/mob/hair.dmi'
+
+/datum/sprite_accessory/hair/ThickLongAlt
+	name = "Thick (Long Alt)"
+	icon_state = "hair_thick_(long alt)"
+	icon = 'modular_splurt/icons/mob/hair.dmi'
+
 //Podpeople hair
 /datum/sprite_accessory/hair/podmale
 	name = "Pod Male"
@@ -211,6 +231,14 @@
 	icon = 'modular_splurt/icons/mob/hair.dmi'
 	icon_state = "hair_phoebe"
 
+//BLUEMOON ADD
+
+/datum/sprite_accessory/hair/dave2
+	name = "Dave 2"
+	icon = 'modular_splurt/icons/mob/hair.dmi'
+	icon_state = "hair_dave2"
+
+//BLUEMOON ADD END
 
 /datum/sprite_accessory/hair/teshari
 	name = "Teshari Default"

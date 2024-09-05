@@ -54,6 +54,7 @@ GLOBAL_LIST_INIT(civilian_positions, list(
 	"Chaplain",
 	"Clown",
 	"Mime",
+	"Bridge Officer", // BLUEMOON EDIT
 	"Prisoner",
 	"Assistant",
 	"Stowaway"))
@@ -84,7 +85,7 @@ GLOBAL_LIST_INIT(exp_jobsmap, list(
 	EXP_TYPE_COMMAND = list("titles" = command_positions),
 	EXP_TYPE_ENGINEERING = list("titles" = engineering_positions),
 	EXP_TYPE_LAW = list("titles" = law_positions),
-	EXP_TYPE_MEDICAL = list("titles" = medical_positions),
+	EXP_TYPE_MEDICAL = list("titles" = medical_positions | list("Brig Physician")), // BLUEMOON EDIT
 	EXP_TYPE_SCIENCE = list("titles" = science_positions),
 	EXP_TYPE_SUPPLY = list("titles" = supply_positions),
 	EXP_TYPE_SECURITY = list("titles" = security_positions),

@@ -12,6 +12,7 @@
 	exp_type = EXP_TYPE_CREW
 
 	outfit = /datum/outfit/job/roboticist
+	departments = DEPARTMENT_BITFLAG_SCIENCE
 	plasma_outfit = /datum/outfit/plasmaman/robotics
 
 	access = list(ACCESS_ROBOTICS, ACCESS_TOX, ACCESS_TOX_STORAGE, ACCESS_TECH_STORAGE, ACCESS_MORGUE, ACCESS_RESEARCH, ACCESS_MINERAL_STOREROOM, ACCESS_XENOBIOLOGY, ACCESS_GENETICS)
@@ -26,7 +27,7 @@
 	threat = 1
 
 	family_heirlooms = list(
-		/obj/item/toy/figure/borg
+		/obj/item/toy/figure/borg,
 	)
 
 	mail_goodies = list(
@@ -34,6 +35,10 @@
 		/obj/item/stack/sheet/metal/twenty = 15,
 		/obj/item/modular_computer/tablet/preset/advanced = 5
 	)
+
+/datum/job/roboticist/New()
+	. = ..()
+	family_heirlooms += subtypesof(/obj/item/toy/mecha)
 
 /datum/outfit/job/roboticist
 	name = "Roboticist"

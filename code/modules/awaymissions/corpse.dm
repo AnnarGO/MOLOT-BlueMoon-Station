@@ -131,6 +131,11 @@
 		M.ckey = ckey
 		if(ishuman(M) && load_character)
 			var/mob/living/carbon/human/H = M
+			if (H.client)
+				SSlanguage.AssignLanguage(H, H.client)
+				if (loadout_enabled == TRUE)
+					SSjob.equip_loadout(null, H)
+					SSjob.post_equip_loadout(null, H)
 			H.load_client_appearance(H.client)
 		//splurt change
 		if(jobban_isbanned(M, "pacifist")) //do you love repeat code? i sure do
@@ -146,22 +151,22 @@
 			to_chat(M, output_message)
 		var/datum/mind/MM = M.mind
 		var/datum/antagonist/A
-		if(antagonist_type)
-			A = MM.add_antag_datum(antagonist_type)
-		if(objectives)
-			if(!A)
-				A = MM.add_antag_datum(/datum/antagonist/custom)
-			for(var/objective in objectives)
-				var/datum/objective/O = new/datum/objective(objective)
-				O.owner = MM
-				A.objectives += O
+		// BLUEMOON EDIT START - правки гостролей
+		// Хэндлить у хуманов будем, собственно, у хуманов, чтобы нормально с ghost_team работать
+		if(!istype(src, /obj/effect/mob_spawn/human))
+			if(antagonist_type)
+				A = MM.add_antag_datum(antagonist_type)
+			if(objectives)
+				if(!A)
+					A = MM.add_antag_datum(/datum/antagonist/custom)
+				for(var/objective in objectives)
+					var/datum/objective/O = new/datum/objective(objective)
+					O.owner = MM
+					A.objectives += O
+		// BLUEMOON EDIT END
 		if(assignedrole)
 			M.mind.assigned_role = assignedrole
 		special(M, name)
-		if (M.client)
-			if (loadout_enabled == TRUE)
-				SSjob.equip_loadout(null, M)
-				SSjob.post_equip_loadout(null, M)
 		MM.name = M.real_name
 		to_chat(M,"<span class='boldwarning'>В Эксту посещать станцию допустимо, в Динамику запрещено!</span>")
 		special_post_appearance(M, name) // BLUEMOON ADD
