@@ -1,3 +1,4 @@
+/* BLUEMOON EDIT - CODE OVERRIDDEN IN 'modular_bluemoon\phoenix404\modules\vending\wardrobes.dm'
 /obj/item/vending_refill/wardrobe
 	icon_state = "refill_clothes"
 
@@ -413,6 +414,7 @@
 					/obj/item/storage/belt/janitor = 2,
 					/obj/item/screwdriver = 2,
 					/obj/item/clothing/mask/balaclava/breath/redscarf/purplescarf = 2,
+					/obj/item/t_scanner/dirt_scanner = 2,
 					/obj/item/stack/cable_coil/random = 4)
 	refill_canister = /obj/item/vending_refill/wardrobe/jani_wardrobe
 	default_price = PRICE_CHEAP
@@ -787,7 +789,7 @@
 		/obj/item/clothing/head/maid/syndicate/civil = 5,
 		/obj/item/clothing/head/helmet/swat/ds/civil = 5,
 		/obj/item/clothing/head/hats/warden/syndicate/civil = 5,
-		/obj/item/card/id/syndicate/one_access_copy = 5
+		/obj/item/card/id/syndicate/civilian/vending = 5
 	)
 	refill_canister = /obj/item/vending_refill/wardrobe/syndie_wardrobe/civil
 	light_color = COLOR_MOSTLY_PURE_RED
@@ -795,3 +797,4 @@
 /obj/item/vending_refill/wardrobe/syndie_wardrobe/civil
 	machine_name = "Civilian SynDrobe"
 	icon_state = "refill_donksoft"
+*/

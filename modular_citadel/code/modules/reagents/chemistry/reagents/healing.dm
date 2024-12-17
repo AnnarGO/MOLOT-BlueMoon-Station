@@ -136,7 +136,7 @@
 						if(policy)
 							to_chat(C, policy)
 						C.log_message("revived using synthtissue, [tplus] deciseconds from time of death, considered late revival due to usage of synthtissue.", LOG_GAME)
-						message_admins(C, "[ADMIN_LOOKUPFLW(C)] возвращён к жизни и [late? "всё помнит" : "ничего не помнит"].")
+						message_admins("[ADMIN_LOOKUPFLW(C)] возвращён к жизни и [late? "всё помнит" : "ничего не помнит"].")
 						log_admin(C, "[C] возвращён к жизни и [late? "всё помнит" : "ничего не помнит"].")
 			else
 				var/preheal_brute = C.getBruteLoss()
@@ -236,6 +236,7 @@
 	pH = 8
 	taste_description = "chalky metal"
 	color = "#FFDADA"
+	chemical_flags = REAGENT_ALL_PROCESS
 	metabolization_rate = 8 * REAGENTS_METABOLISM //Metabolizes fast but heals a lot! Lasts far longer if more pure.
 	value = REAGENT_VALUE_RARE //Relatively hard to make now, might be fine with VERY_RARE instead depending on feedback.
 
