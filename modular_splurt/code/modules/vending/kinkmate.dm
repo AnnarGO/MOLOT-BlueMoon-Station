@@ -1,12 +1,14 @@
-/* BLUEMOON EDIT - CODE OVERRIDDEN IN 'modular_bluemoon\phoenix404\modules\vending\kinkmate.dm'
+/* BLUEMOON EDIT - CODE OVERRIDDEN IN 'modular_bluemoon\code\modules\vending\kinkmate.dm'
 /obj/machinery/vending/kink/Initialize()
 	var/list/extra_products = list(
 		/obj/item/storage/pill_bottle/belly_inflation = 10,
 		/obj/item/electropack/vibrator/small = 2,
 		/obj/item/electropack/vibrator = 2,
 		/obj/item/leash = 3,
-		/obj/item/milking_machine = 5,
-		/obj/item/milking_machine/penis = 5,
+		/obj/item/storage/box/shibari_stand = 5,
+		/obj/item/storage/box/milking_kit =5,
+		/obj/item/sucking_machine = 3,
+		/obj/item/sucking_machine/penis = 3,
 		/obj/item/genital_equipment/sounding = 4,
 		/obj/item/storage/fancy/jellybean_pack = 5,
 		/obj/item/storage/box/aphrodisiac_pump = 5,
@@ -77,4 +79,4 @@
 	LAZYADD(contraband, extra_contraband)
 	LAZYADD(premium, extra_premium)
 	. = ..()
-BLUEMOON EDIT - CODE OVERRIDDEN IN 'modular_bluemoon\phoenix404\modules\vending\kinkmate.dm' */
+BLUEMOON EDIT - CODE OVERRIDDEN IN 'modular_bluemoon\code\modules\vending\kinkmate.dm' */
